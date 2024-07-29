@@ -1,7 +1,6 @@
 package vn.hoidanit.laptopshop.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,9 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -45,7 +43,7 @@ public class UserController {
     public String getTableUser(Model model){
         List<User> arrUser = this.userService.getAllUsers();
         model.addAttribute("users", arrUser);
-        return "admin/user/table-user";
+        return "admin/user/show";
     }
 
     @RequestMapping("/admin/user/{id}")
@@ -57,7 +55,7 @@ public class UserController {
         model.addAttribute("fullName", user.getFullName());
         model.addAttribute("address", user.getAddress());
 
-        return "admin/user/show";
+        return "admin/user/detail";
     }
 
     @RequestMapping(value = "/admin/user/create", method = RequestMethod.POST)
