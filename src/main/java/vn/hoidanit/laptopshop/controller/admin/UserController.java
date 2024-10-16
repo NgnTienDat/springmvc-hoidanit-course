@@ -1,8 +1,11 @@
 package vn.hoidanit.laptopshop.controller.admin;
 
 import java.util.List;
+import java.util.Optional;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.validation.Valid;
+import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.User;
 import vn.hoidanit.laptopshop.service.UploadService;
 import vn.hoidanit.laptopshop.service.UserService;
@@ -49,9 +53,25 @@ public class UserController {
     }
 
     @RequestMapping("/admin/user")
-    public String getTableUser(Model model) {
-        List<User> arrUser = this.userService.getAllUsers();
-        model.addAttribute("users", arrUser);
+    public String getTableUser(Model model, @RequestParam("page") Optional<String> optionalPage) {
+        int page = 1;
+        try {
+            if (optionalPage.isPresent()) {
+                page = Integer.parseInt(optionalPage.get());
+            } else {
+                // page = 1
+            }
+        } catch (Exception e) {
+            // page = 1
+        }
+        Pageable pageable = PageRequest.of(page - 1, 2);
+        Page<User> users = this.userService.getAllProducts(pageable);
+        List<User> listUsers = users.getContent();
+
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPages", users.getTotalPages());
+        model.addAttribute("users", listUsers);
+
         return "admin/user/show";
     }
 
@@ -109,9 +129,7 @@ public class UserController {
             @ModelAttribute("userUpdate") @Valid User userU,
             BindingResult userBindingResult,
             @RequestParam("hoidanitFile") MultipartFile file) {
-        
 
-        
         List<FieldError> errors = userBindingResult.getFieldErrors();
         for (FieldError error : errors) {
             System.out.println(">>> " + error.getField() + " - " + error.getDefaultMessage());
