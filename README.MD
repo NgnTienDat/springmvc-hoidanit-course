@@ -37,7 +37,7 @@
 ### 2️. Cài đặt và chạy dự án
 #### Clone repository
 ```bash
-git clone <link-repo>
+git clone <https://github.com/NgnTienDat/springmvc-hoidanit-course>
 cd <tên-thư-mục>
 ```
 #### Cấu hình database
@@ -51,7 +51,7 @@ spring.datasource.password=<password>
 
 #### Chạy dự án
 ```bash
-mvn spring-boot:run
+Chạy trực tiếp bằng file `LaptopshopApplication.java` trong thư mục `src/main/java/vn/hoidanit/laptopshop/`
 ```
 
 ### 3️. Truy cập ứng dụng
