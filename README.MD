@@ -1,4 +1,4 @@
-# 🛒 WebApp Kinh Doanh Laptop
+# WebApp Kinh Doanh Laptop
 
 ## Giới thiệu
 Dự án **WebApp Kinh Doanh Laptop** là một hệ thống thương mại điện tử giúp người dùng dễ dàng mua sắm laptop trực tuyến. Ứng dụng được xây dựng bằng **Spring Boot** và sử dụng **MySQL** làm cơ sở dữ liệu, hỗ trợ đầy đủ các chức năng quản lý sản phẩm, giỏ hàng, đơn hàng và thanh toán.
@@ -72,12 +72,12 @@ Dự án đi kèm với một file **SQL** chứa dữ liệu mẫu để bạn 
 #### File cơ sở dữ liệu
 - **Vị trí**: `database/laptopshop.sql`(sẽ cập nhật sau)
 - **Cách import vào MySQL**:
-  1. Mở **MySQL Workbench**.
-  2. Tạo một database mới với lệnh:
+  1️⃣ Mở **MySQL Workbench**.
+  2️⃣ Tạo một database mới với lệnh:
      ```sql
      CREATE DATABASE laptopshop;
      ```
-  3. Trong MySQL Workbench, vào **Server** → **Data Import** → Chọn file `laptopshop.sql` và nhấn **Start Import**.
+  3️⃣ Trong MySQL Workbench, vào **Server** → **Data Import** → Chọn file `laptopshop.sql` và nhấn **Start Import**.
 
 
 ## Liên hệ
