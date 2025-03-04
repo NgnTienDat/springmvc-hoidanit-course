@@ -59,12 +59,12 @@ Bạn có thể chạy dự án trên **IntelliJ IDEA** hoặc **Visual Studio C
    ```
 4. Hoặc chạy trực tiếp bằng file `LaptopshopApplication.java` trong thư mục:
    ```
-   src/main/java/com/example/laptopshop/
+   src/main/java/vn/hoidanit/laptopshop/
    ```
 
 ### 3️⃣ Truy cập ứng dụng
 - **Trang Admin**: [http://localhost:8080/admin](http://localhost:8080/admin)
-- **Trang Người Dùng**: [http://localhost:8080/home](http://localhost:8080/home)
+- **Trang Người Dùng**: [http://localhost:8080](http://localhost:8080)
 
 ### 4️⃣ Cơ sở dữ liệu mẫu
 Dự án đi kèm với một file **SQL** chứa dữ liệu mẫu để bạn dễ dàng thiết lập cơ sở dữ liệu.
