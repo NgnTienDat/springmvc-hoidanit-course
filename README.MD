@@ -4,7 +4,7 @@
 Đây là một dự án WebApp kinh doanh mặt hàng laptop, được xây dựng bằng Java và Spring Framework, kết hợp với MySQL để quản lý cơ sở dữ liệu. Dự án cung cấp đầy đủ các tính năng cho cả **quản trị viên** và **người dùng**, bao gồm quản lý sản phẩm, giỏ hàng, đặt hàng và thanh toán.
 
 ## Công nghệ sử dụng
-- **Ngôn ngữ lập trình**: Java 17
+- **Ngôn ngữ lập trình**: Java
 - **Framework**: Spring Boot 3.2.2
 - **Cơ sở dữ liệu**: MySQL
 - **View Engine**: JSP
@@ -37,8 +37,7 @@
 ### 2️. Cài đặt và chạy dự án
 #### Clone repository
 ```bash
-git clone <https://github.com/NgnTienDat/springmvc-hoidanit-course>
-cd <tên-thư-mục>
+git clone [https://github.com/NgnTienDat/springmvc-hoidanit-course)
 ```
 #### Cấu hình database
 - Tạo một database MySQL mới
@@ -50,9 +49,19 @@ spring.datasource.password=<password>
 ```
 
 #### Chạy dự án
-```bash
-Chạy trực tiếp bằng file `LaptopshopApplication.java` trong thư mục `src/main/java/vn/hoidanit/laptopshop/`
-```
+Bạn có thể chạy dự án trên **IntelliJ IDEA** hoặc **Visual Studio Code**.
+
+** Khuyến khích sử dụng Visual Studio Code với các bước sau:**
+1. Mở thư mục dự án trong **Visual Studio Code**.
+2. Cài đặt **Extension Pack for Java** (nếu chưa có).
+3. Mở terminal và chạy lệnh:
+   ```bash
+   mvn spring-boot:run
+   ```
+4. Hoặc chạy trực tiếp bằng file `LaptopshopApplication.java` trong thư mục:
+   ```
+   src/main/java/com/example/laptopshop/
+   ```
 
 ### 3️. Truy cập ứng dụng
 - **Trang Admin**: `http://localhost:8080/admin`
