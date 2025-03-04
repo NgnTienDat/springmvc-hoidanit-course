@@ -6,6 +6,7 @@ Dự án **WebApp Kinh Doanh Laptop** là một hệ thống thương mại đi�
 ## Công nghệ sử dụng
 - **Ngôn ngữ lập trình**: Java
 - **Framework**: Spring Boot 3.2.2
+- **Mô hình kiến trúc**: MVC (Model-View-Controller)
 - **Cơ sở dữ liệu**: MySQL
 - **Giao diện**: JSP (Sử dụng template từ [ThemeWagon](https://themewagon.com/))
 - **Bảo mật**: Spring Security (Authorization, Session, Remember Me)
