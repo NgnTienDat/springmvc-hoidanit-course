@@ -147,6 +147,16 @@ Dự án đi kèm với một file **SQL** chứa dữ liệu mẫu để bạn 
   3️⃣ Trong MySQL Workbench, vào **Server** → **Data Import** -> Chọn Import from self-contained file → Chọn file `laptopshop.sql` -> Tại mục Default Target Schema, chọn laptopshop và nhấn **Start Import**.
 
 
+Đặc tả database:
+users - roles: Một người dùng có một vai trò (users.role_id → roles.id).
+users - carts: Một người dùng có một giỏ hàng (carts.user_id → users.id).
+carts - cart_detail: Một giỏ hàng chứa nhiều sản phẩm (cart_detail.cart_id → carts.id).
+cart_detail - products: Một sản phẩm có thể thuộc nhiều giỏ hàng (cart_detail.product_id → products.id).
+users - orders: Một người dùng có thể có nhiều đơn hàng (orders.user_id → users.id).
+orders - order_detail: Một đơn hàng có thể chứa nhiều sản phẩm (order_detail.order_id → orders.id).
+order_detail - products: Một sản phẩm có thể thuộc nhiều đơn hàng (order_detail.product_id → products.id).
+
+
 ## Liên hệ
 Mọi thắc mắc trong quá trình tải hoặc cài đặc dự án vui lòng liên hệ qua email 2251012143trung@ou.edu.vn hoặc 2251012034dat@ou.edu.vn. 
 
