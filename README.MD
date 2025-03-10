@@ -27,7 +27,7 @@ Dự án **WebApp Kinh Doanh Laptop** là một hệ thống thương mại đi�
       Nếu xóa, hệ thống yêu cầu xác nhận trước khi thực hiện
 
 - **Quản lý sản phẩm**
-   + Thêm sản phẩm: Admin nhập thông tin sản phẩm mới gồm tên, mô tả, giá, số lượng tồn kho, danh mục...
+   + Thêm sản phẩm: Admin nhập thông tin sản phẩm mới gồm tên, mô tả, giá, số lượng,...
    + Cập nhật sản phẩm: Cho phép chỉnh sửa thông tin sản phẩm, thay đổi giá, số lượng hoặc mô tả.
    + Xóa sản phẩm: Loại bỏ sản phẩm không còn kinh doanh.
    + Tải lên hình ảnh sản phẩm: Admin có thể chọn và tải lên nhiều hình ảnh cho sản phẩm
@@ -56,9 +56,9 @@ Dự án **WebApp Kinh Doanh Laptop** là một hệ thống thương mại đi�
 
 - **Lọc sản phẩm theo khoảng giá, hãng sản xuất,...**
    + Cho phép người dùng lọc sản phẩm theo:
-      Hãng sản xuất (ví dụ: điện thoại, laptop, phụ kiện, v.v.).
+      Hãng sản xuất (ví dụ: Dell, Asus, v.v.).
       Mức giá (ví dụ: dưới 1 triệu, 1-5 triệu, trên 5 triệu).
-      Thương hiệu (ví dụ: Apple, Samsung, Sony).
+      Mục đích sử dụng (ví dụ: Gaming, Doanh nhân,...).
    + Quy trình
       Người dùng truy cập trang Sản phẩm.
       Sử dụng bộ lọc để tìm sản phẩm theo nhu cầu.
