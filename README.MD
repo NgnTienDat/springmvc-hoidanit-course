@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+# Java Spring Starter template (update)
+Template này được sử dụng cho series Java Spring MVC (dự án laptopshop) của tác giả Hỏi Dân IT (Eric)
+
+## Về tác giả
+Mọi thông tin về Tác giả Hỏi Dân IT, các bạn có thể tìm kiếm tại đây:
+
+Website chính thức: https://hoidanit.vn/
+
+Youtube “Hỏi Dân IT” : https://www.youtube.com/@hoidanit
+
+Tiktok “Hỏi Dân IT” :  https://www.tiktok.com/@hoidanit
+
+Fanpage “Hỏi Dân IT” : https://www.facebook.com/askITwithERIC/
+
+Udemy Hỏi Dân IT: https://www.udemy.com/user/eric-7039/
+
+=======
 # WebApp Kinh Doanh Laptop
 
 ## Giới thiệu
@@ -84,3 +102,4 @@ Dự án đi kèm với một file **SQL** chứa dữ liệu mẫu để bạn 
 ## Liên hệ
 Mọi thắc mắc trong quá trình tải hoặc cài đặc dự án vui lòng liên hệ qua email 2251012143trung@ou.edu.vn hoặc 2251012034dat@ou.edu.vn. 
 
+>>>>>>> 2cfad24d516ba86a428f75cde1a4bf15d3e39cf5

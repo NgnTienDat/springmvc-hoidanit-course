@@ -1,9 +1,9 @@
 package vn.hoidanit.laptopshop.controller.client;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -18,7 +18,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import vn.hoidanit.laptopshop.domain.Cart;
 import vn.hoidanit.laptopshop.domain.CartDetail;
-import vn.hoidanit.laptopshop.domain.Order;
+
 import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.Product_;
 import vn.hoidanit.laptopshop.domain.User;

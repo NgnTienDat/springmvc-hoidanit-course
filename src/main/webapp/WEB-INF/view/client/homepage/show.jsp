@@ -74,7 +74,7 @@
                                         <li class="nav-item">
                                             <a class="d-flex m-2 py-2 bg-light rounded-pill active"
                                                href="/products">
-                                                <span class="text-dark" style="width: 130px;">All Products</span>
+                                                <span class="text-dark" style="width: 130px;">LỌC SẢN PHẨM</span>
                                             </a>
                                         </li>
                                     </ul>
