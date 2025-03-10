@@ -137,7 +137,7 @@ Bạn có thể chạy dự án trên **IntelliJ IDEA** hoặc **Visual Studio C
 Dự án đi kèm với một file **SQL** chứa dữ liệu mẫu để bạn dễ dàng thiết lập cơ sở dữ liệu.
 
 #### File cơ sở dữ liệu
-- **Vị trí**: `database/laptopshop.sql`(sẽ cập nhật sau)
+- **Vị trí**: https://drive.google.com/file/d/16QCC-Hb55sxiecNv7I8i6TjCscviYPmN/view?usp=sharing
 - **Cách import vào MySQL**:
   1️⃣ Mở **MySQL Workbench**.
   2️⃣ Tạo một database mới với lệnh:
