@@ -18,7 +18,6 @@ Dự án **WebApp Kinh Doanh Laptop** là một hệ thống thương mại đi�
 ### Dành cho Quản Trị Viên (Admin)
 - **Quản lý người dùng**: Thêm, cập nhật, xóa (CRUD)
 - **Quản lý sản phẩm**: Thêm, cập nhật, xóa, tải lên hình ảnh sản phẩm
-- **Quản lý danh mục sản phẩm**
 - **Quản lý đơn hàng**: Xem danh sách đơn hàng, thay đổi trạng thái đơn hàng
 
 ### Dành cho Người Dùng
