@@ -27,7 +27,7 @@ Dự án **WebApp Kinh Doanh Laptop** là một hệ thống thương mại đi�
 - **Tăng/giảm số lượng sản phẩm trong giỏ**
 - **Đặt hàng và thanh toán**
 - **Xem lịch sử mua hàng**
-
+- test
 
 ## Hướng dẫn cài đặt
 ### 1️⃣ Yêu cầu hệ thống
