@@ -148,13 +148,78 @@ Dự án đi kèm với một file **SQL** chứa dữ liệu mẫu để bạn 
 
 
 Đặc tả database:
-users - roles: Một người dùng có một vai trò (users.role_id → roles.id).
-users - carts: Một người dùng có một giỏ hàng (carts.user_id → users.id).
-carts - cart_detail: Một giỏ hàng chứa nhiều sản phẩm (cart_detail.cart_id → carts.id).
-cart_detail - products: Một sản phẩm có thể thuộc nhiều giỏ hàng (cart_detail.product_id → products.id).
-users - orders: Một người dùng có thể có nhiều đơn hàng (orders.user_id → users.id).
-orders - order_detail: Một đơn hàng có thể chứa nhiều sản phẩm (order_detail.order_id → orders.id).
-order_detail - products: Một sản phẩm có thể thuộc nhiều đơn hàng (order_detail.product_id → products.id).
+
+1. Bảng roles (Vai trò)
+- Mục đích: Quản lý vai trò người dùng trong hệ thống (Admin, Khách hàng, Nhân viên, v.v.).
+- Các cột dữ liệu:
+   + id (BIGINT, PRIMARY KEY): Mã vai trò.
+   + name (VARCHAR(255)): Tên vai trò.
+   + description (VARCHAR(255)): Mô tả vai trò.
+2. Bảng users (Người dùng)
+- Mục đích: Lưu trữ thông tin người dùng trong hệ thống.
+- Các cột dữ liệu:
+   + id (BIGINT, PRIMARY KEY): Mã người dùng.
+   + address (VARCHAR(255)): Địa chỉ của người dùng.
+   + avatar (VARCHAR(255)): Đường dẫn ảnh đại diện.
+   + email (VARCHAR(255)): Email đăng nhập.
+   + full_name (VARCHAR(255)): Họ và tên.
+   + password (VARCHAR(255)): Mật khẩu (được mã hóa).
+   + phone (VARCHAR(255)): Số điện thoại.
+   + role_id (BIGINT, FOREIGN KEY → roles.id): Vai trò của người dùng.
+3. Bảng products (Sản phẩm)
+- Mục đích: Lưu trữ thông tin về các sản phẩm.
+- Các cột dữ liệu:
+   + id (BIGINT, PRIMARY KEY): Mã sản phẩm.
+   + detail_desc (MEDIUMTEXT): Mô tả chi tiết.
+   + factory (VARCHAR(255)): Nhà sản xuất.
+   + image (VARCHAR(255)): Đường dẫn ảnh sản phẩm.
+   + name (VARCHAR(255)): Tên sản phẩm.
+   + price (DOUBLE): Giá sản phẩm.
+   + quantity (BIGINT): Số lượng tồn kho.
+   + short_desc (VARCHAR(255)): Mô tả ngắn.
+   + sold (BIGINT): Số lượng đã bán.
+   + target (VARCHAR(255)): Mục đích sử dụng
+4. Bảng carts (Giỏ hàng)
+- Mục đích: Lưu trữ thông tin giỏ hàng của người dùng.
+- Các cột dữ liệu:
+   + id (BIGINT, PRIMARY KEY): Mã giỏ hàng.
+   + sum (INT): Tổng số sản phẩm trong giỏ.
+   + user_id (BIGINT, FOREIGN KEY → users.id): Mã người dùng sở hữu giỏ hàng.
+5. Bảng cart_detail (Chi tiết giỏ hàng)
+- Mục đích: Lưu trữ chi tiết các sản phẩm trong giỏ hàng.
+Các cột dữ liệu:
+   + id (BIGINT, PRIMARY KEY): Mã chi tiết giỏ hàng.
+   + price (DOUBLE): Giá sản phẩm tại thời điểm thêm vào giỏ.
+   + quantity (BIGINT): Số lượng sản phẩm trong giỏ.
+   + cart_id (BIGINT, FOREIGN KEY → carts.id): Mã giỏ hàng.
+   + product_id (BIGINT, FOREIGN KEY → products.id): Mã sản phẩm.
+6. Bảng orders (Đơn hàng)
+- Mục đích: Lưu trữ thông tin các đơn hàng của người dùng.
+- Các cột dữ liệu:
+   + id (BIGINT, PRIMARY KEY): Mã đơn hàng.
+   + total_price (DOUBLE): Tổng giá trị đơn hàng.
+   + user_id (BIGINT, FOREIGN KEY → users.id): Mã người dùng đặt hàng.
+   + receiver_address (VARCHAR(255)): Địa chỉ nhận hàng.
+   + receiver_name (VARCHAR(255)): Tên người nhận.
+   + receiver_phone (VARCHAR(255)): Số điện thoại người nhận.
+   + status (VARCHAR(255)): Trạng thái đơn hàng 
+7. Bảng order_detail (Chi tiết đơn hàng)
+- Mục đích: Lưu trữ thông tin chi tiết từng đơn hàng.
+- Các cột dữ liệu:
+   + id (BIGINT, PRIMARY KEY): Mã chi tiết đơn hàng.
+   + price (DOUBLE): Giá sản phẩm tại thời điểm đặt hàng.
+   + quantity (BIGINT): Số lượng sản phẩm trong đơn.
+   + order_id (BIGINT, FOREIGN KEY → orders.id): Mã đơn hàng.
+   + product_id (BIGINT, FOREIGN KEY → products.id): Mã sản phẩm.
+
+Mối quan hệ
+- users - roles: Một người dùng có một vai trò (users.role_id → roles.id).
+- users - carts: Một người dùng có một giỏ hàng (carts.user_id → users.id).
+- carts - cart_detail: Một giỏ hàng chứa nhiều sản phẩm (cart_detail.cart_id → carts.id).
+- cart_detail - products: Một sản phẩm có thể thuộc nhiều giỏ hàng (cart_detail.product_id → products.id).
+- users - orders: Một người dùng có thể có nhiều đơn hàng (orders.user_id → users.id).
+- orders - order_detail: Một đơn hàng có thể chứa nhiều sản phẩm (order_detail.order_id → orders.id).
+- order_detail - products: Một sản phẩm có thể thuộc nhiều đơn hàng (order_detail.product_id → products.id).
 
 
 ## Liên hệ
