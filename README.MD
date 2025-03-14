@@ -225,4 +225,3 @@ Mối quan hệ
 ## Liên hệ
 Mọi thắc mắc trong quá trình tải hoặc cài đặc dự án vui lòng liên hệ qua email 2251012143trung@ou.edu.vn hoặc 2251012034dat@ou.edu.vn. 
 
->>>>>>> 2cfad24d516ba86a428f75cde1a4bf15d3e39cf5
